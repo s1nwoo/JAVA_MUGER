@@ -13,39 +13,29 @@
 * 사용기술 : HTML, CSS, JAVASCRIPT, JQUERY
 * 개발환경 : Visual Studio Code
 * 개발팀원 : [정신우](https://github.com/s1nwoo "정신우") [김승연](https://github.com/nullsector12 "김승연") [임재영](https://github.com/LIm-JY "임재영") [지용욱](https://github.com/jiyonguk "지용욱") [이혜진](https://github.com/1117j "이혜진") [양창일](https://github.com/clachic00 "양창일")
-* 담당업무 : 메인
+* 담당업무 : 메인 홈페이지 및 결제창
 
 -----------
 
 ## &#128170; 주요기능 
 * 메인화면 광고 노출(Auto-Sliding)
-* SNS 아이콘 연결
-* 마우스 오버 시 색상 변경
+* 로고 클릭 시 메인화면으로 이동
+* SNS 아이콘 클릭 시 연결된 주소로 이동
+* 마우스 오버 효과
+* 상단으로 이동 버튼
 * 메뉴 클릭 시 주문 리스트 추가
 * 결제 시 주문내역 리스트 출력
 
 -----------
 
-## &#128187; 프로젝트 인트로 영상
-* [메인](file:///C:/Users/%EC%8B%A0%EC%9A%B0/Documents/GitHub/AIA03/WEP/project/javamuger_main.html, "google link")
-
-※ 클릭 시 유튜브로 연결됩니다. Ctrl+클릭으로 새창열기 해주세요.
-
------------
 ## &#128187; 프로젝트 시연 영상
-[![Video Label](https://img.youtube.com/vi/NiBQ3iUOvgM/0.jpg)](https://youtu.be/NiBQ3iUOvgM)
+[![Video Label](https://img.youtube.com/vi/KzScufSdnyQ/0.jpg)](https://youtu.be/KzScufSdnyQ)
 
 ※ 클릭 시 유튜브로 연결됩니다. Ctrl+클릭으로 새창열기 해주세요.
 
 -----------
 ## &#128221; 개발 설계
-* [ToDoList](https://docs.google.com/document/d/1bYT4GFLcFJ_UjXLoZdrYLiE4dDvtWJQcQLat3OIq1Uw/edit?usp=sharing)
-* [플로우차트](https://drive.google.com/file/d/1pmmGtBzhikj7JPZHjvUBrX5z2B82_SZL/view?usp=sharing) / 사용툴 : [drow io](https://app.diagrams.net/)
-* [기능정의서](https://docs.google.com/spreadsheets/d/1NCqAn5_14D6SS678_U6fSOFyqZ_dbzm945EmDkZdceU/edit?usp=sharing)
-* [ERD](https://drive.google.com/file/d/1aqfKfQEfgmiJ37vbYgq1GpkJVNK8YktS/view?usp=sharing) 사용툴 : [ERD Cloud](https://www.erdcloud.com/)
-* [화면설계서](https://drive.google.com/file/d/1G3vA51nAK-AKpIPjIehYtJ21bRyvGTKh/view?usp=sharing) / 사용툴 : [Kakao Oven](https://ovenapp.io/)
-* [테이블정의서](https://docs.google.com/spreadsheets/d/1NCqAn5_14D6SS678_U6fSOFyqZ_dbzm945EmDkZdceU/edit?usp=sharing)
-* &#127775;[프로젝트 최종 PPT](https://drive.google.com/file/d/1cWE9EtIXe5pwTTxQFqWmT6agnqX9BCKH/view?usp=sharing)
+
 -----------
 ## &#128173; 느낀 점
 ```
