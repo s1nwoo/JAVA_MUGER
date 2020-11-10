@@ -13,7 +13,7 @@
 * 사용기술 : HTML, CSS, JAVASCRIPT, JQUERY
 * 개발환경 : Visual Studio Code
 * 개발팀원 : [정신우](https://github.com/s1nwoo "정신우") [김승연](https://github.com/nullsector12 "김승연") [임재영](https://github.com/LIm-JY "임재영") [지용욱](https://github.com/jiyonguk "지용욱") [이혜진](https://github.com/1117j "이혜진") [양창일](https://github.com/clachic00 "양창일")
-* 담당업무 : 메인 CSS 작업 및 결제창 기능
+* 담당업무 : 메인
 
 -----------
 
@@ -27,7 +27,7 @@
 -----------
 
 ## &#128187; 프로젝트 인트로 영상
-[![Video Label](https://img.youtube.com/vi/aCwO6-Lt5fA/0.jpg)](https://youtu.be/aCwO6-Lt5fA)
+* [메인](file:///C:/Users/%EC%8B%A0%EC%9A%B0/Documents/GitHub/AIA03/WEP/project/javamuger_main.html, "google link")
 
 ※ 클릭 시 유튜브로 연결됩니다. Ctrl+클릭으로 새창열기 해주세요.
 
