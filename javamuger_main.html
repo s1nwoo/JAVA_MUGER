@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo - autoplay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- 글꼴 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Nova+Slim&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+        figure.snip1384 {
+            float: left;
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 20px;
+            min-width: 230px;
+            max-width: 315px;
+            width: 100%;
+            color: #ffffff;
+            text-align: left;
+            font-size: 14px;
+            background-color: #000000;
+        }
+
+        figure.snip1384 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+
+        figure.snip1384 img {
+
+            float: left;
+            width: 100%;
+            backface-visibility: hidden;
+            vertical-align: top;
+        }
+
+        figure.snip1384:after,
+        figure.snip1384 figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        figure.snip1384:after {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.65);
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+            opacity: 0;
+        }
+
+        figure.snip1384 figcaption {
+            z-index: 1;
+            padding: 40px;
+        }
+
+        figure.snip1384 h3,
+        figure.snip1384 .links {
+            width: 100%;
+            margin: 5px 0;
+            padding: 0;
+        }
+
+        figure.snip1384 h3 {
+            line-height: 1.1em;
+            font-weight: 700;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            opacity: 0;
+        }
+
+        figure.snip1384 p {
+            font-size: 0.8em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0;
+            top: 50%;
+            -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+        }
+
+        figure.snip1384 i {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 20px 25px;
+            font-size: 34px;
+            opacity: 0;
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+        }
+
+        figure.snip1384 a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        figure.snip1384:hover img,
+        figure.snip1384.hover img {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            -webkit-opacity: 0.5;
+            opacity: 0.5;
+        }
+
+        figure.snip1384:hover:after,
+        figure.snip1384.hover:after {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+        }
+
+        figure.snip1384:hover h3,
+        figure.snip1384.hover h3,
+        figure.snip1384:hover p,
+        figure.snip1384.hover p,
+        figure.snip1384:hover i,
+        figure.snip1384.hover i {
+            -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+
+
+        }
+
+        .content1_p {
+            font-size: 30px;
+            font-family: 'Nanum Gothic', sans-serif;
+            /* font-family: 'Nova Slim', cursive; */
+        }
+
+        body {
+            background: white;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 50%;
+
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: white;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        #header {
+            width: 1000px;
+            margin-left: 445px;
+            /* margin: 0 auto; */
+            padding: 20px;
+            /* margin-bottom: 20px; */
+            /* border: 3px solid red; */
+        }
+
+
+
+        #aside {
+            height: 200px;
+            position: static;
+            float: left;
+            width: 200px;
+        }
+
+        #content1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 1070px;
+            height: 350px;
+            margin-right: 20px;
+            margin-left: 450px;
+            text-align: center;
+            /* border: 3px solid red; */
+        }
+
+        .best1,
+        .best2,
+        .best3 {
+            margin: 10px;
+        }
+
+
+
+        #content2 {
+            width: 1070px;
+            height: 230px;
+            float: left;
+            margin-right: 20px;
+            margin-left: 450px;
+            text-align: center;
+        }
+
+
+        #footer {
+            position: relative;
+            height: 200px;
+            clear: both;
+            padding: 20px;
+            /* border: 3px solid red; */
+            background-color: #292929;
+        }
+
+
+        #table1 {
+            border-spacing: 0 10px;
+            margin-left: 400px;
+            margin-right: 100px;
+            float: left;
+            color: white;
+        }
+
+        .table1_td1 {
+            color: #F9D423;
+        }
+
+        #table2 {
+            border-spacing: 0 10px;
+            color: #cdcdcd;
+        }
+
+        #footer_left {
+            float: left;
+            margin-right: 200px;
+        }
+
+        #footer_right {
+            margin-top: 30px;
+            float: left;
+        }
+
+        #content2 button {
+            background-color: whitesmoke;
+            border-radius: 20px;
+            width: 400px;
+            height: 150px;
+        }
+
+        #content2 button:hover {
+            background-color: #F9D423;
+        }
+
+        .btn_store {
+            border: none;
+            margin-top: 50px;
+            margin-right: 60px;
+            font-size: 45px;
+            background-color: white;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .btn_takeout {
+            border: none;
+            background-color: white;
+            margin-left: 60px;
+            font-size: 45px;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        #btn_store_span {
+            position: relative;
+            bottom: 10px;
+        }
+
+        #btn_takeout_span {
+            position: relative;
+            bottom: 10px;
+        }
+
+        .over {
+            /* margin: -3px; */
+            border: 3px solid #FF4E50;
+        }
+
+        #top {
+            font-size: 20px;
+            width: 80px;
+            height: 50px;
+            border: 0;
+            font-weight: bolder;
+        }
+
+        #logo {
+            width: 200px;
+            height: 130px;
+        }
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('.btn_store',).hover(function () {
+                $(this).addClass('over');
+            }, function () {
+                $(this).removeClass('over');
+            });
+
+            $('.btn_takeout',).hover(function () {
+                $(this).addClass('over');
+            }, function () {
+                $(this).removeClass('over');
+            });
+
+
+            /* Demo purposes only */
+            $(".hover").mouseleave(function () {
+                $(this).removeClass("hover");
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <!-- 최상단 header -->
+    <header id="header">
+        <a href="javamuger_main.html">
+            <img src="HTML Project images/LogoSample5.jpg" id="logo"></a>
+    </header>
+
+    <!-- Swiper 광고창-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image/광고2.png"></div>
+            <div class="swiper-slide"><img src="image/광고3.png"></div>
+            <div class="swiper-slide"><img src="image/광고4.png"></div>
+            <div class="swiper-slide"><img src="image/광고5.png"></div>
+            <div class="swiper-slide"><img src="image/광고6.png"></div>
+            <div class="swiper-slide"><img src="image/광고7.png"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+    <div id="content1">
+        <p class="content1_p">BEST MENU TOP 3</p>
+        <figure class="snip1384">
+            <img src="image/베스트메뉴1.png" alt="sample83" />
+            <figcaption>
+                <h3>Big® Mac</h3>
+                <p>100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스.
+                    입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지.
+                    50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사.</p><i class="ion-ios-arrow-right"></i>
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+        <figure class="snip1384"><img src="image/베스트메뉴2.png" alt="sample66" />
+            <figcaption>
+                <h3>McSpicy® Shanghai Burger</h3>
+                <p>매콤한 시즈닝을 입힌 100% 닭가슴 통살 위에
+                    아삭아삭한 양상추와 신선한 토마토~
+                    겉은 바삭, 속은 부드러운 치킨 패티의 매콤함으로
+                    입맛도 기분도 화끈하게!</p><i class="ion-ios-arrow-right"></i>
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+        <figure class="snip1384"><img src="image/베스트메뉴3.png" alt="sample92" />
+            <figcaption>
+                <h3>Triple Cheeseburger</h3>
+                <p>부드러운 치즈와 풍부한 육즙의 패티를
+                    세배 더 진하게 즐길 수 있는 트리플 치즈버거 </p><i class="ion-ios-arrow-right"></i>
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+    </div>
+    <hr>
+    <!-- 주문창 -->
+    <div id="content2">
+        <a href="Javamurger_kiosk_Main.html">
+        <button class="btn_store">
+            <img src="image/forhereicon.png" width="60"><span id="btn_store_span"> 주문하기 </span></button></a>
+    </div>
+
+    <!-- 오른쪽 사이드창 -->
+    <aside id="aside">
+        <div>
+            <button onclick="window.location.href='#header'" id="top">T O P</button>
+        </div>
+
+    </aside>
+
+    <!-- 하단창 -->
+    <footer id="footer">
+        <div id="footer_left">
+            <table id="table1">
+                <tr>
+                    <td class="table1_td1">개인정보 처리방침</td>
+                </tr>
+                <tr>
+                    <td>위치정보 이용약관</td>
+                </tr>
+                <tr>
+                    <td>사이트맵</td>
+                </tr>
+                <tr>
+                    <td>임차문의</td>
+                </tr>
+                <tr>
+                    <td>고객문의</td>
+                </tr>
+                <tr>
+                    <td>인재채용</td>
+                </tr>
+            </table>
+            <table id="table2">
+                <tr>
+                    <td>(주)자바머거</td>
+                </tr>
+                <tr>
+                    <td>대표이사: 정신우</td>
+                </tr>
+                <tr>
+                    <td>사업자등록번호: 2020-06-26</td>
+                </tr>
+                <tr>
+                    <td>전화주문: 02-722-1481</td>
+                </tr>
+                <tr>
+                    <td>COPYRIGHT © 2020 ALL RIGHTS RESERVED BY Java Murger</td>
+                </tr>
+            </table>
+        </div>
+        <div id="footer_right">
+            <a href="https://www.facebook.com/McDonaldsKorea" target="_blank"><img src="image/페북.JPG"></a>
+            <a href="https://www.instagram.com/mcdonalds_kr/" target="_blank"><img src="image/인스타.JPG"></a>
+            <a href="https://www.youtube.com/user/McDonaldsKor" target="_blank"><img src="image/유튜브.JPG"></a>
+            <a href="https://story.kakao.com/ch/mcdonalds/feed" target="_blank"><img src="image/카톡.JPG"></a>
+        </div>
+
+    </footer>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
+    </script>
+</body>
+
+</html>
