@@ -32,12 +32,15 @@
 [![Video Label](https://img.youtube.com/vi/KzScufSdnyQ/0.jpg)](https://youtu.be/KzScufSdnyQ)
 
 ※ 클릭 시 유튜브로 연결됩니다. Ctrl+클릭으로 새창열기 해주세요.
-
+* [메인 홈페이지 코드](https://github.com/s1nwoo/JAVA_MUGER/blob/main/project/javamurger_main.html, "google link")
+* [키오스크 주문창 코드](https://github.com/s1nwoo/JAVA_MUGER/blob/main/project/Javamurger_kiosk_Main.html, "google link")
+* [결제창 코드](https://github.com/s1nwoo/JAVA_MUGER/blob/main/project/javamurger_payment.html, "google link")
 -----------
 ## &#128221; 개발 설계
 * [ToDoList](https://docs.google.com/document/d/1IvrWVPDCgVQLMaXhDXSSm5qMns_7q3XAozKs4qfhm_Q/edit, "google link")
 * &#127775;[프로젝트 최종 PDF](https://drive.google.com/file/d/1L8q76aMk36JVl-PDoMy8N8v27Y37Zv4k/view?usp=sharing, "google link")
 -----------
+
 ## &#128173; 느낀 점
 ```
 두 번째 프로젝트는 웹 표 프로젝트로 화면 설계와 UI를 구현하였다. 프론트 계열은 백 엔드보다 직관적이라 쉬울 것이라 생각했었다.
